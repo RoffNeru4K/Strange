@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Zodiac</title>
+    <style>
+        body {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            font-size: 2em;
+            color: black;
+            margin-bottom: 20px;
+        }
+        .zodiac {
+            font-size: 3em;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Zodiac</h1>
+        <div class="zodiac" id="zodiac"></div>
+    </div>
+    <script>
+        const zodiacs = [
+            "Aries", "Taurus", "Gemini", "Cancer", 
+            "Leo", "Virgo", "Libra", "Scorpio", 
+            "Sagittarius", "Capricorn", "Aquarius", "Pisces"
+        ];
+        const randomZodiac = zodiacs[Math.floor(Math.random() * zodiacs.length)];
+        document.getElementById('zodiac').textContent = randomZodiac;
+    </script>
+</body>
+</html>
